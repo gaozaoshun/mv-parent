@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: mv-eureka-ha-server1
+server:
+  port: 10002
+eureka:
+  client:
+    service-url:
+        defaultZone: http://admin:123456@127.0.0.1:10001/eureka/
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: 123456

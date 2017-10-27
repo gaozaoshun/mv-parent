@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mv-consumer-feign" />
+        <module name="mv-consumer-ribbon" />
+        <module name="mv-eureka-ha-server1" />
+        <module name="mv-eureka-ha-server2" />
+        <module name="mv-parent" />
+        <module name="mv-provider-basic" />
+        <module name="mv-provider-staticdata" />
+        <module name="mv-turbine" />
+        <module name="mv-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mv-consumer-feign" target="1.8" />
+      <module name="mv-consumer-ribbon" target="1.8" />
+      <module name="mv-eureka-ha-server1" target="1.8" />
+      <module name="mv-eureka-ha-server2" target="1.8" />
+      <module name="mv-parent" target="1.8" />
+      <module name="mv-provider-basic" target="1.8" />
+      <module name="mv-provider-staticdata" target="1.8" />
+      <module name="mv-turbine" target="1.8" />
+      <module name="mv-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

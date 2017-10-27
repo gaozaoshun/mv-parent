@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mv-consumer-feign/mv-consumer-feign.iml" filepath="$PROJECT_DIR$/mv-consumer-feign/mv-consumer-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-consumer-ribbon/mv-consumer-ribbon.iml" filepath="$PROJECT_DIR$/mv-consumer-ribbon/mv-consumer-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-eureka-ha-server1/mv-eureka-ha-server1.iml" filepath="$PROJECT_DIR$/mv-eureka-ha-server1/mv-eureka-ha-server1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-eureka-ha-server2/mv-eureka-ha-server2.iml" filepath="$PROJECT_DIR$/mv-eureka-ha-server2/mv-eureka-ha-server2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-parent.iml" filepath="$PROJECT_DIR$/mv-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-provider-basic/mv-provider-basic.iml" filepath="$PROJECT_DIR$/mv-provider-basic/mv-provider-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-provider-staticdata/mv-provider-staticdata.iml" filepath="$PROJECT_DIR$/mv-provider-staticdata/mv-provider-staticdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-turbine/mv-turbine.iml" filepath="$PROJECT_DIR$/mv-turbine/mv-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-zuul/mv-zuul.iml" filepath="$PROJECT_DIR$/mv-zuul/mv-zuul.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: mv-consumer-ribbon
+server:
+  port: 10004
+eureka:
+  client:
+    service-url:
+        defaultZone: http://admin:123456@127.0.0.1:10001/eureka/

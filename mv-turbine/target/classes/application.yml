@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mv-turbine
+server:
+  port: 10006
+turbine:
+  appConfig: mv-consumer-feign,mv-consumer-ribbon
+
+  clusterNameExpression: new String("default")
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@127.0.0.1:10001/eureka/

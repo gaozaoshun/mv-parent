@@ -79,3 +79,28 @@
 >* 默认实现了负载均衡，只需在其他服务器上配置相同的应用集群。
 >* 访问：http://127.0.0.1:10009/[serviceId]/mv/order/{id}
 >* 实现ZuulFilter即可实现权限认证
+
+># 高可用配置中心
+>* 配置server端：用于连接获取Github上的配置文件信息,并将配置信息clone到本地内存
+>* 引入依赖spring-cloud-starter-config-server
+>* 配置spring.cloud.config.server.git.uri|search-paths|username|password
+>* spring.cloud.config.label
+>* 启动类添加@EnableConfigServer
+
+>* 配置client端：从config-server端读取该服务名下profile域下的配置信息
+>* 引入依赖spring-cloud-starter-config
+>* 把application.yml放到github上并命名为{application}-{profile}.yml.
+>* 新建bootstrap.properties:
+>* spring.application.name=mv-consumer-feign
+>* spring.cloud.config.label=master
+>* spring.cloud.config.profile=dev
+>* spring.cloud.config.uri=http://127.0.0.1:10010
+>* 启动后会先访问http://127.0.0.1:10010/master/mv-consumer-feign-dev.yml文件
+>* 并作为application.yml进行解析。
+
+>* 高可用集群:
+>* 把相同server端部署到不同服务器上，并作为服务注册到Eureka注册中心
+>* 客户端只需添加配置：
+>* spring.cloud.config.discovery.enabled=true
+>* spring.cloud.config.discovery.serviceId=config-server
+>* 用于客户端发现config-server,实现负载均衡，从而高可用。

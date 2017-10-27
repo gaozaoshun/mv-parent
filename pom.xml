@@ -6,7 +6,7 @@
 	<groupId>org.exotic</groupId>
 	<artifactId>mv-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>mv-parent</name>
 	<description>搞笑短视频分享</description>
@@ -15,10 +15,13 @@
 		<module>mv-eureka-ha-server1</module>
 		<module>mv-eureka-ha-server2</module>
 		<module>mv-provider-basic</module>
+		<module>mv-provider-staticdata</module>
 		<module>mv-consumer-ribbon</module>
 		<module>mv-consumer-feign</module>
 		<module>mv-turbine</module>
+		<module>mv-config-server</module>
 		<module>mv-zuul</module>
+		<module>mv-utils</module>
 	</modules>
 
 	<parent>

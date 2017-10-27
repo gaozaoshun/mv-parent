@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/mv-consumer-feign/pom.xml" />
         <option value="$PROJECT_DIR$/mv-turbine/pom.xml" />
         <option value="$PROJECT_DIR$/mv-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/mv-config-server/pom.xml" />
       </list>
     </option>
   </component>

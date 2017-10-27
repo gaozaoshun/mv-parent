@@ -2,6 +2,7 @@ package org.exotic.controller;
 
 import org.exotic.dto.OrderModel;
 import org.exotic.service.RpcService;
+import org.exotic.utils.Response2Json;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +18,7 @@ public class OrderController {
     private RpcService rpcService;
 
     @GetMapping("mv/order/{id}")
-    public OrderModel findById(@PathVariable("id") String id){
-        return rpcService.findById(id);
+    public Response2Json.ResBody findById(@PathVariable("id") String id){
+        return Response2Json.toJsonBean(Response2Json.CODE_SUCCESS,"",rpcService.findById(id));
     }
 }

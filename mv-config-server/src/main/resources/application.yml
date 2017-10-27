@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mv-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gaozaoshun/mv-config/
+          search-paths: /
+          username: 739178184@qq.com
+          password: 13556457068+qq
+      label: master
+server:
+  port: 10011
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@127.0.0.1:10001/eureka/

@@ -103,4 +103,28 @@
 >* 客户端只需添加配置：
 >* spring.cloud.config.discovery.enabled=true
 >* spring.cloud.config.discovery.serviceId=config-server
+>* eureka.client.service-url.defaultZone=http://admin:123456@127.0.0.1:10001/eureka/
 >* 用于客户端发现config-server,实现负载均衡，从而高可用。
+
+>* 客户端Refresh最新配置：
+>* 添加依赖actuator监控包
+>* 在带有@Value的类上添加@RefreshScope
+>* 配置management.security.enabled=false 
+>* 刷新时关闭安全认证。
+>* post访问客户端的/refresh
+>* 即刷新@Value的值。
+
+># 消息总线实现所有客户端配置更新
+>* 服务器安装rabbitMQ
+>* 客户端添加依赖spring-cloud-starter-bus-amqp
+>* 配置如下：
+>* management.security.enabled=false
+>* spring.cloud.bus.trace.enabled=true
+>* spring.rabbitmq.host=192.168.66.128
+>* spring.rabbitmq.port=5672
+>* spring.rabbitmq.username=admin
+>* spring.rabbitmq.password=123456
+>* 启动后访问post访问任意客户端/bus/refresh即可刷新全部客户端的配置@Value
+
+># <span style="color:red">注意：</span>
+>* 1.配置文件不要出现多余的空格。 

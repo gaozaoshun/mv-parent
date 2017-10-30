@@ -126,5 +126,13 @@
 >* spring.rabbitmq.password=123456
 >* 启动后访问post访问任意客户端/bus/refresh即可刷新全部客户端的配置@Value
 
+># 服务链路追踪分析
+>* 构建zipkin-server,依赖有zipkin-server、zipkin-autoconfigure-ui
+>* 启动类添加@EnableZipkinServer
+>* 配置application.yml:
+>* server.port=10012
+>* 
+>*
+>*
 ># <span style="color:red">注意：</span>
 >* 1.配置文件不要出现多余的空格。 

@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/mv-provider-staticdata/mv-provider-staticdata.iml" filepath="$PROJECT_DIR$/mv-provider-staticdata/mv-provider-staticdata.iml" />
       <module fileurl="file://$PROJECT_DIR$/mv-turbine/mv-turbine.iml" filepath="$PROJECT_DIR$/mv-turbine/mv-turbine.iml" />
       <module fileurl="file://$PROJECT_DIR$/mv-utils/mv-utils.iml" filepath="$PROJECT_DIR$/mv-utils/mv-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mv-zipkin/mv-zipkin.iml" filepath="$PROJECT_DIR$/mv-zipkin/mv-zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/mv-zuul/mv-zuul.iml" filepath="$PROJECT_DIR$/mv-zuul/mv-zuul.iml" />
     </modules>
   </component>

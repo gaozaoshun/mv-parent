@@ -14,9 +14,17 @@ spring:
           #配置为true表示如果本地副本是脏的，将使Spring Cloud Config Server强制从远程存储库拉取配置。
           force-pull: true
       label: master
+  rabbitmq:
+    host: 192.168.66.128
+    port: 5672
+    username: admin
+    password: 123456
 server:
   port: 10011
 eureka:
   client:
     service-url:
       defaultZone: http://admin:123456@127.0.0.1:10001/eureka/
+management:
+  security:
+    enabled: false

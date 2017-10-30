@@ -15,6 +15,7 @@
         <module name="mv-provider-staticdata" />
         <module name="mv-turbine" />
         <module name="mv-utils" />
+        <module name="mv-zipkin" />
         <module name="mv-zuul" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,7 @@
       <module name="mv-provider-staticdata" target="1.8" />
       <module name="mv-turbine" target="1.8" />
       <module name="mv-utils" target="1.8" />
+      <module name="mv-zipkin" target="1.8" />
       <module name="mv-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>

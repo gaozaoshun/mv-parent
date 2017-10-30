@@ -1,0 +1,9 @@
+server:
+  port: 10012
+spring:
+  application:
+    name: mv-zipkin
+eureka:
+  client:
+    service-url:
+       defaultZone: htp://admin:123456@127.0.0.1:10001/eureka/

@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/mv-turbine/pom.xml" />
         <option value="$PROJECT_DIR$/mv-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/mv-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/mv-zipkin/pom.xml" />
       </list>
     </option>
   </component>

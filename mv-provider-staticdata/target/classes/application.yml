@@ -1,6 +1,9 @@
 spring:
   application:
     name: mv-provider-basic
+  zipkin:
+    service:
+      name: mv-zipkin
 server:
   port: 10033
 eureka:

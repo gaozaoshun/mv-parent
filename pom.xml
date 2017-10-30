@@ -21,6 +21,7 @@
 		<module>mv-turbine</module>
 		<module>mv-config-server</module>
 		<module>mv-zuul</module>
+		<module>mv-zipkin</module>
 		<module>mv-utils</module>
 	</modules>
 

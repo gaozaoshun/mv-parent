@@ -31,5 +31,30 @@
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 	</dependencies>
-
+	<build>
+		<plugins>
+			<!--docker插件-->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.14</version>
+				<configuration>
+					<!--镜像名-->
+					<imageName>${parent.artifactId}/${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<!--远程docker仓库-->
+					<dockerHost>http://192.168.1.116:2375</dockerHost>
+					<!--引入的资源-->
+					<!--/target/mv-eureka-ha-server1-0.0.1-SNAPSHOT.jar-->
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

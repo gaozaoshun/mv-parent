@@ -127,12 +127,25 @@
 >* 启动后访问post访问任意客户端/bus/refresh即可刷新全部客户端的配置@Value
 
 ># 服务链路追踪分析
->* 构建zipkin-server,依赖有zipkin-server、zipkin-autoconfigure-ui
->* 启动类添加@EnableZipkinServer
+>* 构建zipkin-server,依赖有zipkin-server、zipkin-autoconfigure-ui、eureka
+>* 启动类添加@EnableZipkinServer、@EnableDiscoveryClient
 >* 配置application.yml:
 >* server.port=10012
+>* spring.application.name=mv-zipkin
+>* eureka.client.service-url.defaultZone=http://127.0.0.1:10001/eureka/
+>* 启动后注册到服务注册中心
+>* 想要加入到服务追踪链的客户端，需要添加依赖zipkin-client、eureka
+>* 需要添加如下配置：
+>* spring.zipkin.service.name=mv-zipkin
+>* 用于发现zipkin服务。
+>* 通过访问http://127.0.0.1:10012可以查询到被调用api接口的整条服务链。
+
+># Docker部署spring-cloud项目
+>* 在项目pom.xml引入插件
 >* 
->*
->*
+>* 
+>* 
+>* 
+>* 
 ># <span style="color:red">注意：</span>
 >* 1.配置文件不要出现多余的空格。 
